@@ -24,7 +24,7 @@ function play(i: number) {
   if (board.value[i] || winner()) return
   board.value[i] = player
   if (winner()) {
-    message.value = '¡Ganaste!'
+    message.value = 'Eres un papu pro'
     return
   }
   aiTurn()
@@ -38,7 +38,7 @@ function aiTurn() {
   }
   const choice = empty[Math.floor(Math.random() * empty.length)]
   board.value[choice] = ai
-  if (winner()) message.value = 'La IA gana'
+  if (winner()) message.value = 'No puede ser te ha ganado chatgpt y mira que lo he puesto para que no pueda ganar'
   else message.value = 'Tu turno'
 }
 

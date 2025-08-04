@@ -31,8 +31,8 @@
           :exit="{ opacity: 0, scale: 0.8 }"
           :transition="{ duration: 0.3 }"
         >
-          <p class="text-lg">🎉 ¡Has comido 10 manzanas!</p>
-          <p class="mt-2">Eso significa que... ¡me amas tanto como yo a ti! 🍎💖</p>
+          <p class="text-lg">¡Has ganado!</p>
+          <p class="mt-2">Eso significa que me quieres tanto como yo a ti! (y que no te rindes y eres buena al snake)</p>
           <button
             class="mt-4 px-3 py-1 bg-pink-200 rounded hover:bg-pink-300"
             @click="exit"

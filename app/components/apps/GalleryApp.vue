@@ -1,20 +1,20 @@
 <template>
   <div class="grid grid-cols-3 gap-2 w-64">
     <img
-      v-for="(img, i) in images"
-      :key="i"
-      :src="img"
-      class="w-20 h-20 object-cover rounded cursor-pointer"
-      @click="open(i)"
+        v-for="(img, i) in images"
+        :key="i"
+        :src="img"
+        class="w-20 h-20 object-cover rounded cursor-pointer"
+        @click="open(i)"
     />
     <AnimatePresence>
       <Motion
-        v-if="current !== null"
-        key="modal"
-        class="fixed inset-0 bg-black/50 flex items-center justify-center"
-        :initial="{ opacity: 0 }"
-        :animate="{ opacity: 1 }"
-        :exit="{ opacity: 0 }"
+          v-if="current !== null"
+          key="modal"
+          class="fixed inset-0 bg-black/50 flex items-center justify-center"
+          :initial="{ opacity: 0 }"
+          :animate="{ opacity: 1 }"
+          :exit="{ opacity: 0 }"
       >
         <div class="bg-white p-4 rounded-xl shadow-xl">
           <img :src="images[current]" class="w-64 h-64 object-contain" />
@@ -33,8 +33,16 @@
 import { ref } from 'vue'
 import { Motion, AnimatePresence } from 'motion-v'
 
-const modules = import.meta.glob('/public/gallery/*.{jpg,png}', { eager: true, as: 'url' })
-const images = Object.values(modules)
+const images = [
+  '/amorcitos/img01.jpeg',
+  '/amorcitos/img02.jpeg',
+  '/amorcitos/img03.jpeg',
+  '/amorcitos/img04.jpeg',
+  '/amorcitos/img05.jpeg',
+  '/amorcitos/img06.jpeg',
+  '/amorcitos/img07.jpeg'
+]
+
 const current = ref<number | null>(null)
 
 function open(i: number) {

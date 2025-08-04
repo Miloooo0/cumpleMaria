@@ -36,7 +36,21 @@
 import { ref } from 'vue'
 import { Motion, AnimatePresence } from 'motion-v'
 
-const images = ['img1.jpg', 'img2.jpg', 'img3.jpg']
+const images = [
+  'Img01.jpeg',
+  'Img02.jpeg',
+  'Img03.jpeg',
+  'Img04.jpeg',
+  'Img05.jpeg',
+  'Img06.jpeg',
+  'Img07.jpeg',
+  'Img08.jpeg',
+  'Img09.jpeg',
+  'Img10.jpeg',
+  'Img11.jpeg',
+  'Img12.jpeg',
+  'Img13.jpeg'
+]
 const selected = ref('')
 
 function open(name: string) {
