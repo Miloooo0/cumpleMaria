@@ -1,25 +1,42 @@
 <template>
-  <div class="w-80 h-96 relative overflow-hidden">
-    <AnimatePresence v-if="!finished">
+  <div class="w-72 h-60 relative overflow-hidden">
+    <AnimatePresence>
       <Motion
-        v-for="(q, idx) in questions"
-        v-show="current === idx"
-        :key="idx"
+        v-if="current < questions.length"
+        :key="current"
         class="absolute inset-0 bg-rose-100 rounded-xl flex flex-col justify-center items-center p-4 text-center"
-        :initial="{ x: 200, opacity: 0 }"
+        :initial="{ x: 100, opacity: 0 }"
         :animate="{ x: 0, opacity: 1 }"
-        :exit="{ x: -200, opacity: 0 }"
+        :exit="{ x: -100, opacity: 0 }"
       >
-        <p class="flex-1 flex items-center justify-center text-xl">{{ q }}</p>
+        <p class="flex-1 flex items-center justify-center text-lg">{{ questions[current] }}</p>
         <div class="flex gap-4 mb-4">
-          <button @click="next" class="px-4 py-2 bg-rose-300 rounded-full">❌</button>
-          <button @click="next" class="px-4 py-2 bg-pink-300 rounded-full">💖</button>
+          <Motion
+            as="button"
+            @click="answer"
+            class="px-4 py-2 bg-pink-300 rounded-full"
+            :whileTap="{ scale: 0.9 }"
+          >Sí</Motion>
+          <Motion
+            as="button"
+            @click="answer"
+            class="px-4 py-2 bg-rose-300 rounded-full"
+            :whileTap="{ scale: 0.9 }"
+          >No</Motion>
+        </div>
+      </Motion>
+      <Motion
+        v-else
+        key="end"
+        class="absolute inset-0 bg-pink-50 rounded-xl flex items-center justify-center p-4 text-center"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+      >
+        <div class="text-pink-700 text-xl">
+          💖 Resultado: Te quiere, muchísimo. Aunque lo niegue.
         </div>
       </Motion>
     </AnimatePresence>
-    <div v-else class="absolute inset-0 flex items-center justify-center text-2xl bg-pink-50 rounded-xl">
-      Te quiere mucho 💖. Más que a nada.
-    </div>
   </div>
 </template>
 
@@ -28,15 +45,14 @@ import { ref } from 'vue'
 import { Motion, AnimatePresence } from 'motion-v'
 
 const questions = [
-  '¿Cuál es su postre favorito?',
-  '¿Qué emoji te representa?',
-  '¿A dónde iremos de viaje?'
+  '¿Me quieres?',
+  '¿Me dejarías comer la última croqueta?',
+  '¿Me harías un té si estoy triste?'
 ]
-const current = ref(0)
-const finished = ref(false)
 
-function next() {
-  if (current.value < questions.length - 1) current.value++
-  else finished.value = true
+const current = ref(0)
+
+function answer() {
+  current.value++
 }
 </script>

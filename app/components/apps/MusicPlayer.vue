@@ -23,7 +23,7 @@
       :max="duration"
       v-model="progress"
       @input="seek"
-      class="w-full mt-2 h-2 rounded-full bg-pink-200 accent-pink-600"
+      class="w-full mt-2 h-2 bg-pink-200 rounded-full appearance-none accent-pink-500"
     />
     <div class="flex items-center gap-2 justify-center mt-2">
       <span>🔈</span>
@@ -33,8 +33,9 @@
         max="1"
         step="0.01"
         v-model="volume"
-        class="w-24 accent-pink-600"
+        class="w-24 h-2 bg-pink-200 rounded-full appearance-none accent-pink-500"
       />
+      <span class="text-xs">{{ Math.round(volume * 100) }}%</span>
     </div>
     <audio ref="audioRef" class="hidden" @timeupdate="update" @ended="next" />
   </Motion>

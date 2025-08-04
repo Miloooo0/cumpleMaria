@@ -39,8 +39,14 @@ const items = [
   { id: 'music', label: 'Música', icon: '🎵' },
   { id: 'snake', label: 'Snake', icon: '🐍' },
   { id: 'calc', label: 'Calc', icon: '🧮' },
-  { id: 'gallery', label: 'Galería', icon: '🖼️' },
   { id: 'notes', label: 'Notas', icon: '📝' },
-  { id: 'tictactoe', label: '3 en raya', icon: '⭕' }
+  { id: 'tictactoe', label: '3 en raya', icon: '⭕' },
+  { id: 'love', label: 'LoveTest', icon: '💘' },
+  { id: 'amorcitos', label: 'Amorcitos', icon: '📁' },
+  { id: 'dibuja', label: 'Dibuja', icon: '🎨' },
+  { id: 'sabias', label: 'Sabías que', icon: '🧠' },
+  { id: 'sorpresa', label: 'Sorpresa', icon: '🎁' },
+  { id: 'recuerdos', label: 'Recuerdos', icon: '📦' },
+  { id: 'tv', label: 'TV', icon: '📺' }
 ]
 </script>
