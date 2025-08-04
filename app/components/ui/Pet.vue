@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { Motion } from 'motion-v'
 
 const phrases = [
@@ -33,5 +33,13 @@ function petClick() {
   setTimeout(() => (pet.value = '🐱'), 1000)
 }
 
-setInterval(randomMessage, 10000)
+let interval: ReturnType<typeof setInterval>
+
+onMounted(() => {
+  interval = setInterval(randomMessage, 10000)
+})
+
+onUnmounted(() => {
+  clearInterval(interval)
+})
 </script>
