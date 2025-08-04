@@ -6,6 +6,8 @@
     <Icon app="gallery" label="Fotos" :x="100" :y="20">🖼️</Icon>
     <Icon app="notes" label="Notas" :x="100" :y="100">📝</Icon>
     <Icon app="tictactoe" label="3 en raya" :x="100" :y="180">⭕</Icon>
+    <Icon app="love" label="LoveTest" :x="180" :y="20">💘</Icon>
+    <Icon app="amorcitos" label="Amorcitos" :x="180" :y="100">📁</Icon>
 
     <AnimatePresence>
       <template v-for="(win, id) in windows">
@@ -34,6 +36,8 @@ import BrokenCalculator from '~/components/apps/BrokenCalculator.vue'
 import GalleryApp from '~/components/apps/GalleryApp.vue'
 import NotesApp from '~/components/apps/NotesApp.vue'
 import TicTacToe from '~/components/apps/TicTacToe.vue'
+import LoveTest from '~/components/apps/LoveTest.vue'
+import Amorcitos from '~/components/apps/Amorcitos.vue'
 import { useWindows } from '~/composables/useWindows'
 
 const { windows } = useWindows()
@@ -44,7 +48,9 @@ const apps: Record<string, any> = {
   calc: BrokenCalculator,
   gallery: GalleryApp,
   notes: NotesApp,
-  tictactoe: TicTacToe
+  tictactoe: TicTacToe,
+  love: LoveTest,
+  amorcitos: Amorcitos
 }
 
 const titles: Record<string, string> = {
@@ -53,6 +59,8 @@ const titles: Record<string, string> = {
   calc: 'Calculadora',
   gallery: 'Galería',
   notes: 'Notas',
-  tictactoe: '3 en raya'
+  tictactoe: '3 en raya',
+  love: 'Love Test',
+  amorcitos: 'Amorcitos'
 }
 </script>

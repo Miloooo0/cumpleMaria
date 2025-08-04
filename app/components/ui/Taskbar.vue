@@ -1,7 +1,7 @@
 <template>
   <div>
     <Motion
-      class="fixed bottom-0 left-0 right-0 h-12 bg-rose-100 border-t border-pink-200 flex items-center px-3 shadow-inner z-50 relative"
+      class="fixed bottom-0 left-1/2 -translate-x-1/2 max-w-xl w-full h-12 bg-rose-100/70 backdrop-blur-md border-t border-pink-200 flex items-center px-3 shadow-inner rounded-t-2xl z-50 relative"
       :initial="{ opacity: 0, y: 20 }"
       :animate="{ opacity: 1, y: 0 }"
       :transition="{ duration: 0.4 }"
@@ -26,7 +26,20 @@
 
       <div class="flex-1" />
 
-      <div class="text-sm px-2">{{ currentTime }}</div>
+      <Motion
+        class="text-sm px-2"
+        :key="currentTime"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{ duration: 0.3 }"
+      >
+        {{ currentTime }}
+      </Motion>
+      <Motion
+        class="text-xl ml-2"
+        :animate="{ y: [0, -3, 0] }"
+        :transition="{ repeat: Infinity, duration: 2 }"
+      >🐱</Motion>
     </Motion>
 
     <StartMenu />
@@ -50,7 +63,9 @@ const titles: Record<string, string> = {
   calc: 'Calc',
   gallery: 'Fotos',
   notes: 'Notas',
-  tictactoe: '3 en raya'
+  tictactoe: '3 en raya',
+  love: 'Love',
+  amorcitos: 'Amorcitos'
 }
 
 onMounted(() => {
