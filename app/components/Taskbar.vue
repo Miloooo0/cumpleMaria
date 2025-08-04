@@ -13,9 +13,9 @@
         🪟
       </button>
 
-      <MusicPlayer class="ml-2" />
-
       <div class="flex-1" />
+
+      <MusicPlayer class="mr-2" />
 
       <div class="text-sm px-2">{{ currentTime }}</div>
     </Motion>

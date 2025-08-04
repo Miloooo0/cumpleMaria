@@ -11,9 +11,11 @@
     >
       <h3 class="font-semibold text-pink-700 mb-2">📂 Inicio</h3>
       <ul class="grid grid-cols-2 gap-3">
-        <li class="text-center text-sm hover:scale-105 transition cursor-pointer">💌 Carta</li>
         <li class="text-center text-sm hover:scale-105 transition cursor-pointer">🎮 Juegos</li>
-        <li class="text-center text-sm hover:scale-105 transition cursor-pointer">🖼️ Galería</li>
+        <li class="text-center text-sm hover:scale-105 transition cursor-pointer">📝 Notas</li>
+        <li class="text-center text-sm hover:scale-105 transition cursor-pointer">🧮 Calculadora</li>
+        <li class="text-center text-sm hover:scale-105 transition cursor-pointer">🎵 Música</li>
+        <li class="text-center text-sm hover:scale-105 transition cursor-pointer">📸 Fotos</li>
       </ul>
       <button @click="toggleStart" class="block mt-4 text-xs text-right text-pink-500 hover:underline">Cerrar</button>
     </Motion>
