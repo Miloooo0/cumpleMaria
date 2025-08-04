@@ -25,7 +25,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import StartMenu from "~/components/StartMenu.vue";
+import MusicPlayer from "~/components/MusicPlayer.vue";
 
 const { toggleStart } = useTaskbar()
 const currentTime = ref('')
