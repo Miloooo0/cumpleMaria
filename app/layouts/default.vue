@@ -7,7 +7,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import Taskbar from "~/components/ui/Taskbar.vue"
+import Taskbar from "~/components/desktop/Taskbar.vue"
 import Decorations from "~/components/ui/Decorations.vue"
 import Pet from "~/components/ui/Pet.vue"
 </script>
