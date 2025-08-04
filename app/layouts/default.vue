@@ -5,5 +5,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import Taskbar from "~/components/Taskbar.vue";
+import Taskbar from "~/components/ui/Taskbar.vue"
 </script>
