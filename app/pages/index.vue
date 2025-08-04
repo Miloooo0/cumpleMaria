@@ -8,17 +8,18 @@
     <Icon app="tictactoe" label="3 en raya" :x="100" :y="180">⭕</Icon>
 
     <AnimatePresence>
-      <Window
-        v-for="(win, id) in windows"
-        v-if="!win.minimized"
-        :key="id"
-        :id="id"
-        :title="titles[id]"
-        :x="200"
-        :y="80"
-      >
-        <component :is="apps[id]" />
-      </Window>
+      <template v-for="(win, id) in windows">
+        <Window
+          v-if="!win.minimized"
+          :key="id"
+          :id="id"
+          :title="titles[id]"
+          :x="200"
+          :y="80"
+        >
+          <component :is="apps[id]" />
+        </Window>
+      </template>
     </AnimatePresence>
   </div>
 </template>
