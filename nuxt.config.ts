@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Cumple María 🎉',
+      title: 'Punshi OS',
       meta: [
         { name: 'description', content: 'Un portal romántico y personalizado 💖' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

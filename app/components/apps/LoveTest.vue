@@ -33,7 +33,7 @@
         :animate="{ opacity: 1 }"
       >
         <div class="text-pink-700 text-xl">
-          LE AMAS AL 100% NO HAY NINGUNA DUDA
+          tu estas enamorao de mi sin duda
         </div>
       </Motion>
     </AnimatePresence>
