@@ -60,6 +60,6 @@ function clear() {
 }
 
 function save() {
-  alert('Dibujo guardado en mi corazón 🧠💘')
+  alert('Dibujo guardado en mi corazón :3')
 }
 </script>

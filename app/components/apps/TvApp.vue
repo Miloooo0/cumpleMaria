@@ -20,10 +20,22 @@
 import { ref } from 'vue'
 
 const channels = [
-  { type: 'gif', value: 'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif' },
-  { type: 'text', value: 'Hola María 💖' },
-  { type: 'gif', value: 'https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif' }
+  { type: 'gif', value: 'https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif' }, // gato tecleando
+  { type: 'text', value: 'Hola PUUUUUNSH' },
+  { type: 'gif', value: 'https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif' }, // gato dando vuelta
+  { type: 'text', value: 'Canal de abrazos infinitos 🫂✨' },
+  { type: 'gif', value: 'https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif' }, // corazón pixel
+  { type: 'text', value: 'Hoy en noticias: Te amo y eso no va a cambiar' },
+  { type: 'gif', value: 'https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif' }, // gatito flotando
+  { type: 'text', value: 'Canal exclusivo de croquetas y caricias' },
+  { type: 'gif', value: 'https://media.giphy.com/media/duzpaTbCUy9Vu/giphy.gif' }, // perrito emocionado
+  { type: 'text', value: 'Repetimos: te quiero, te quiero, te quiero' },
+  { type: 'gif', value: 'https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif' }, // gato feliz dando vueltas
+  { type: 'text', value: 'Canal romántico con programación 24/7 de “rawwr” 😻' },
+  { type: 'gif', value: 'https://media.giphy.com/media/l0ExncehJzexFpRHq/giphy.gif' }, // osito bailando
+  { type: 'text', value: 'Sí, esto es un canal secreto solo para María' }
 ]
+
 const index = ref(0)
 const vol = ref(0.5)
 function next() {

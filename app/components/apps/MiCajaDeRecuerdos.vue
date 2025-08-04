@@ -18,8 +18,15 @@ import { ref } from 'vue'
 interface Memory { date: string; text: string }
 
 const memories = ref<Memory[]>([
-  { date: '14/02/2024', text: 'Primera vez que fuimos a ese café tonto ☕️' }
-])
+      { date: '18/12/2023', text: 'La primera vez que nos vimos en persona' },
+      { date: '18/12/2023', text: 'Nuestro primer beso. "me acabas de dar un beso?"' },
+      { date: '20/12/2023', text: 'El día que decidimos ser novios (oficialmente)' },
+      { date: '18/12/2023', text: 'Dormir abrazaditos por primera vez' },
+      { date: 'nunca', text: 'Nos viciamos a "Cómo conocí a vuestra madre" 💡' },
+      { date: '23/12/2023', text: 'Empezamos The Office y tú eras claramente Pam' },
+      { date: '24/06/2024', text: 'Nos comimos un elao de la Lauri' }
+    ]
+)
 
 const newText = ref('')
 
