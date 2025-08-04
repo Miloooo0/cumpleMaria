@@ -1,7 +1,15 @@
 <template>
-  <div class="w-64">
+  <Motion
+    class="w-64 p-2 bg-white rounded-xl"
+    :initial="{ opacity: 0, scale: 0.9 }"
+    :animate="{ opacity: 1, scale: 1 }"
+    :transition="{ duration: 0.3 }"
+  >
     <h2 class="text-center text-pink-700 mb-2">🎵 Music</h2>
-    <select v-model="currentIndex" class="w-full text-sm bg-white rounded px-2 py-1 border-pink-200">
+    <select
+      v-model="currentIndex"
+      class="w-full text-sm bg-white rounded px-2 py-1 border-pink-200"
+    >
       <option v-for="(song, i) in songs" :key="song.file" :value="i">{{ song.name }}</option>
     </select>
     <div class="flex items-center justify-center gap-2 mt-2">
@@ -15,17 +23,26 @@
       :max="duration"
       v-model="progress"
       @input="seek"
-      class="w-full mt-2"
+      class="w-full mt-2 h-2 rounded-full bg-pink-200 accent-pink-600"
     />
-    <div class="flex justify-end mt-2">
-      <input type="range" min="0" max="1" step="0.01" v-model="volume" class="h-24" orient="vertical" />
+    <div class="flex items-center gap-2 justify-center mt-2">
+      <span>🔈</span>
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        v-model="volume"
+        class="w-24 accent-pink-600"
+      />
     </div>
     <audio ref="audioRef" class="hidden" @timeupdate="update" @ended="next" />
-  </div>
+  </Motion>
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import { Motion } from 'motion-v'
 import { songs } from '~/utils/songs'
 
 const audioRef = ref<HTMLAudioElement | null>(null)
