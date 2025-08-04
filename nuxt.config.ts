@@ -20,6 +20,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'motion-v/nuxt',
   ],
+  components: [
+    {
+      path: '~/app/components',
+      pathPrefix: false,
+    }
+  ],
   nitro: {
     preset: 'vercel'
   }
