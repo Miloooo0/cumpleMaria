@@ -1,75 +1,24 @@
-# Nuxt Minimal Starter
+# Sistema Operativo del Amor
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Aplicación web construida con Nuxt 4, Tailwind y Motion One para simular un escritorio romántico e interactivo.
 
-## Setup
+## Estructura
+- Componentes de aplicaciones en `app/components/apps/`
+- Iconos y ventanas en `app/components/desktop/`
+- UI general (taskbar, start menu) en `app/components/ui/`
+- Estados globales en `app/composables/`
+- Datos reutilizables en `app/utils/`
 
-Make sure to install dependencies:
+## Desarrollo
+Instala dependencias y ejecuta el servidor de desarrollo:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+## Compilación
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
