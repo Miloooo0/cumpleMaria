@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div>
     <Motion
       as="button"
       class="w-8 h-8 flex items-center justify-center rounded hover:bg-pink-200"
@@ -14,10 +14,10 @@
       <Motion
         v-if="playerOpen"
         key="player"
-        class="absolute bottom-12 left-0 w-56 bg-white rounded-xl shadow-xl border border-pink-100 p-4"
-        :initial="{ opacity: 0, y: 20 }"
-        :animate="{ opacity: 1, y: 0 }"
-        :exit="{ opacity: 0, y: 20 }"
+        class="fixed top-0 bottom-12 right-0 w-64 bg-white shadow-xl border-l border-pink-100 p-4"
+        :initial="{ opacity: 0, x: 100 }"
+        :animate="{ opacity: 1, x: 0 }"
+        :exit="{ opacity: 0, x: 100 }"
         :transition="{ duration: 0.3 }"
       >
         <select v-model="selected" class="w-full text-sm bg-white rounded px-2 py-1 border-pink-200">
