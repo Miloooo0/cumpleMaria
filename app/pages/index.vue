@@ -1,5 +1,10 @@
 <template>
-  <div class="w-screen h-screen bg-pink-50 relative overflow-hidden">
+  <div
+    class="w-screen h-screen bg-pink-50 relative overflow-hidden border-8 border-rose-100 rounded-xl [background-image:radial-gradient(circle,_rgba(255,255,255,0.6)_1px,_transparent_1px)] [background-size:20px_20px]"
+  >
+    <FloatingElements />
+    <DesktopClock />
+    <RomanticPopup />
     <Icon app="music" label="Música" :x="20" :y="20">🎵</Icon>
     <Icon app="snake" label="Snake" :x="20" :y="100">🐍</Icon>
     <Icon app="calc" label="Calc" :x="20" :y="180">🧮</Icon>
@@ -12,6 +17,16 @@
     <Icon app="sorpresa" label="Sorpresa" :x="260" :y="20">🎁</Icon>
     <Icon app="recuerdos" label="Recuerdos" :x="260" :y="100">📦</Icon>
     <Icon app="tv" label="TV" :x="260" :y="180">📺</Icon>
+    <img
+      src="/cute/cat.svg"
+      class="absolute bottom-2 left-2 w-16 h-16 opacity-80 pointer-events-none"
+      alt="gatito"
+    />
+    <img
+      src="/cute/bow.svg"
+      class="absolute top-2 right-2 w-12 h-12 opacity-70 pointer-events-none"
+      alt="moño"
+    />
 
     <AnimatePresence>
       <template v-for="(win, id) in windows">
@@ -34,6 +49,9 @@
 import { AnimatePresence } from 'motion-v'
 import Icon from '~/components/desktop/Icon.vue'
 import Window from '~/components/desktop/Window.vue'
+import FloatingElements from '~/components/desktop/FloatingElements.vue'
+import RomanticPopup from '~/components/desktop/RomanticPopup.vue'
+import DesktopClock from '~/components/desktop/DesktopClock.vue'
 import MusicPlayer from '~/components/apps/MusicPlayer.vue'
 import SnakeGame from '~/components/apps/SnakeGame.vue'
 import BrokenCalculator from '~/components/apps/BrokenCalculator.vue'
