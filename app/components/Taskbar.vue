@@ -1,10 +1,10 @@
 <template>
   <div>
-    <motion.div
+    <Motion
       class="fixed bottom-0 left-0 right-0 h-12 bg-rose-100 border-t border-pink-200 flex items-center px-3 shadow-inner z-50 relative"
       :initial="{ opacity: 0, y: 20 }"
       :animate="{ opacity: 1, y: 0 }"
-      transition="{ duration: 0.4 }"
+      :transition="{ duration: 0.4 }"
     >
       <button
         @click="toggleStart"
@@ -18,7 +18,7 @@
       <div class="flex-1" />
 
       <div class="text-sm px-2">{{ currentTime }}</div>
-    </motion.div>
+    </Motion>
 
     <StartMenu />
   </div>
